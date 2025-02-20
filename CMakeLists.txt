@@ -20,3 +20,9 @@ add_library(tempconverter SHARED tempconverter/tempconverter.cpp )
 
 # Link the example program with the static library
 target_link_libraries(assignment2 arithmetic tempconverter)
+
+# compile test code
+add_executable(test test.c unity/unity.c)
+
+# link libraries for test code
+target_link_libraries(test arithmetic tempconverter)
